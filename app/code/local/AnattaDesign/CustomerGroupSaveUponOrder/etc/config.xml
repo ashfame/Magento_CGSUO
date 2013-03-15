@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<AnattaDesign_CustomerGroupSaveUponOrder>
+			<version>1.0</version>
+		</AnattaDesign_CustomerGroupSaveUponOrder>
+	</modules>
+	<global>
+		<events>
+			<sales_order_place_after>
+				<observers>
+					<anatta_cgsuo_order_save_observer>
+						<type>singleton</type>
+						<class>AnattaDesign_CustomerGroupSaveUponOrder_Model_Observer</class>
+						<method>customer_set_group</method>
+					</anatta_cgsuo_order_save_observer>
+				</observers>
+			</sales_order_place_after>
+		</events>
+	</global>
+</config>
